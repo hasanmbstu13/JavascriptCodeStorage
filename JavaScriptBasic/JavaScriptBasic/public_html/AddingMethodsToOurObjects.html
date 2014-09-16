@@ -30,6 +30,26 @@ and open the template in the editor.
     <body>
         <script>
             document.write(mainul.yearsUntilRetire());
+            
+            /*
+             Adding methods to our objects
+             --parenthesis is not used when we assign a method to the objects properties
+             e.g
+          function people(name,age)
+          {
+              this.name = name;
+              this.age = age;
+              this.yearsUntilRetire = yearsLeft;
+          }this is our blueprint or constrictive function and method is
+          function yearsLeft()
+           {
+              var numYears = 65 - this.age;
+              return numYears;
+            }
+           --Paenthesis must be used with the properties when we called a properties which is associated with a method e.g
+           document.write(mainul.yearsUntilRetire());
+        
+             */
         </script>
     </body>
 </html>
