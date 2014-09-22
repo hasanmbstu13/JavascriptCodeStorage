@@ -12,14 +12,14 @@ and open the template in the editor.
     </head>
     <body>
         <script>
-            var namee = [];
-            for(var i=0;i<2;i++){
-                namee[i] = prompt("Enter your Name:","e.g Mainul Hasan");
-          }
-          document.write(namee[0] + namee[1]);
+            var employee = new Array("Mainul", "Mehedi", "Mahmudul", "Zahid");
+            employee.sort();
+            
+            for(i=0;i<employee.length;i++){
+                document.write(employee[i] + "<br />");
+            }
             /*
-             Add Array elements with Loop
-             --Never use name as a variable in javascript because it is the attribute of the html element if we use name as a variable then in output give us the value is undefined
+             --The length element is used to count the array size or element
              */
         </script>
     </body>
