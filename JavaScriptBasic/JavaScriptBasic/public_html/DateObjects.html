@@ -12,16 +12,20 @@ and open the template in the editor.
     </head>
     <body>
         <script>
-//          document.write(Math.PI); 
-//          document.write(Math.E);
-
-            var number = prompt("Enter a number","e.g 10");
-            var answer = Math.sqrt(number);
-            alert("The square root of " + number + " is " + answer);
-            /*
-             Math Objects
-             --is used to perform simple math operation in easiest way like pi,e(exponent),sqrt etc.
-             */
+//          function doSomething(){
+//              document.write("Mainul");
+//          }
+//          setInterval("doSomething()",1000);
+//        
+    function printTime(){
+        var now = new Date();
+        var hours = now.getHours();
+        var mins = now.getMinutes();
+        var seconds = now.getSeconds();
+        document.write(hours+":"+mins+":"+seconds+"<br />");
+    }
+    
+    setInterval("printTime()",1000);
         </script>
     </body>
 </html>
