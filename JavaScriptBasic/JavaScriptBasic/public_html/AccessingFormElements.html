@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name = "hasansForm">
+            Username: <input type ="text" name="userNameText"/>
+            Password: <input type ="password" name="password"/>
+            <input type="submit" value="Submit!"/>      
+        </form>
+        <script>
+            /*
+             Accessing Forms Elements
+             --Firstly identified forms and then identfied which elements we want to access and then identfies which attributes we want to access
+               like document.forms[0].elements[0].name
+             --Another way to access forms elements like
+                docement.hasansForm.elements[0].name
+               Or document.hasansForm.username(elements name).name
+             */
+            var x = document.hasansForm.elements[1].name;
+            document.write(x);
+        </script>
+    </body>
+</html>

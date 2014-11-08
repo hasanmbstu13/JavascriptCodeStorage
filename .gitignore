@@ -10,3 +10,5 @@ bin-release/
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
 /JavaScriptBasic/JavaScriptBasic/nbproject/private/
+/JavaScriptsProject/JavaScriptsProject/nbproject/private/
+/JavaScriptsProject/SimpleCalculator/SimpleCalculator/nbproject/private/
