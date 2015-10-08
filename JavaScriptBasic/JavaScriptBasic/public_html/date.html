@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Working with Dates</title>
+</head>
+<body>
+	<script>
+		var today = new Date(); current date and time
+
+		// year, month, day
+		var y2k = new Date(2000,0,1);
+
+		// year, month, day, hours, minutes, seconds
+		var y2k = new Date(2000,0,1,0,0,0);
+
+		// Get methods of the date object
+		var today = new Date();
+
+		today.getMonth(); 			// returns 0-11
+		today.getFullYear();		// YYYY (not zero-based)
+		today.getYear();			// deprecated
+		today.getDate();			// 1-31 day of month
+		today.getDay();				// 0-6 day of week. 0 === sunday
+		today.getHours();			// 0-23
+		today.getTime();			// milliseconds since 1/1/1970
+
+		// set methods of the date object
+		var today = new Date();
+
+		today.setMonth(5); 			// returns 0-11
+		today.setFullYear(2012);		// YYYY (not zero-based)
+		today.setDay(0);				// 0-6 day of week. 0 === sunday
+		//etc.
+
+		// Comparing Dates
+		var date1 = new Date(2000,0,1);
+		var date2 = new Date(2000,0,1);
+
+		if( date1 == date2 ) { // false
+		}
+
+		if(date1.getTime() == date2.getTime()) { ....
+		}	949388400000   == 943384000000
+			// true!
+
+		var myDate = new Date(1996,11,9);
+		// console.log("Sabbir was born on: ", myDate.getDay() );
+		document.write("Sabbir was born on: ", myDate.getDay() );
+
+	</script>
+</body>
+</html>

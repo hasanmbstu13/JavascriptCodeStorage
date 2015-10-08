@@ -13,7 +13,23 @@ and open the template in the editor.
     <body>
         <script>
             var tuna = "hey iam tuna fish";
-            document.write(tuna.length);
+            document.write(tuna.length + "<br />");
+            
+            // create two objects
+            var player1 = {name: "Fred", score:1000, rank:1 };
+            var player2 = {name: "Sam", score:100000000, rank:5 };
+
+            function playerDetails() {
+                // displa information about each player
+                document.write(this.name + " has a rank of: " + this.rank + " and a score of " + this.score + "<br />");
+            }
+
+            player1.logDetails = playerDetails;
+            player2.logDetails = playerDetails;
+
+            player1.logDetails();
+            player2.logDetails();
+
             /*
              Here,
              --document and tuna is object
