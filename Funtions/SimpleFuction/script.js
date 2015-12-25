@@ -153,3 +153,44 @@ var plus = function() {
 }
 
 console.log(plus(2,2,3,7,6,7));
+
+// Anonymous Closures
+// Create function in Traditional Approach
+function kung() {
+	console.log('foo');
+}
+// Invoke the function 
+kung();
+
+// Assign the function in a variable
+var iknow = function kung() {
+	console.log('foo');
+}
+// kung(); // It will produce an error because it doesn't exist in the global scope
+iknow();
+
+// Improve the function as it excute itself by adding () parenthesis after the function definition
+var iknow = function kung() {
+	console.log('foo');
+}();
+
+var iknow = function kung() {
+	console.log('foo');
+}(3,4); // Instantiate the function
+
+// Anonymous function
+var iknow = function() {
+	console.log('foo');
+}();
+
+// Anonymous closure
+// In anonymous closure any variable created is only accessible by function inside the closure
+(function() {
+	// This is not accessible in outside of the function 
+	// In other words we can say closing this variable inside the function
+	// from rest of the world
+	var a = 1; 
+	console.log('foo');
+})();
+
+console.log(a); // This will give an error.
