@@ -188,9 +188,29 @@ var iknow = function() {
 (function() {
 	// This is not accessible in outside of the function 
 	// In other words we can say closing this variable inside the function
-	// from rest of the world
+	// from rest of the world 
 	var a = 1; 
 	console.log('foo');
 })();
 
 console.log(a); // This will give an error.
+
+// Hoisting and variable scope
+function myDog() {
+	var dogName = 'Fido';
+}
+
+myDog();
+	console.log(dogName + ' says woof');
+// This will produce an error because is not found in the global scope
+
+// Creating & Namespacing modules
+var ray = (function(){
+
+	return {
+		speak: function(){
+			console.log('hello');
+		}
+	};
+})();
+
