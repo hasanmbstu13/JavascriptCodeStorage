@@ -76,11 +76,63 @@ console.log(document.forms[0]);
 // Since form has a name we can select the form using name
 console.log(document.register);
 // We can select the element of the form by sing name attribute
-console.log(document.register.myname);
+// console.log(document.register.myname);
 // We can change the value of the form fileds with the value attribute
-console.log(document.register.myname.value='Mainul Hasan');
+// console.log(document.register.myname.value='Mainul Hasan');
 // There is a possibility two or more elements have the same name in the case we use special methods called getElementsByName and then use array index
-console.log(document.getElementsByName('subscribe')[0]);
+// console.log(document.getElementsByName('subscribe')[0]);
 // Set the checked using checked attribute
-console.log(document.getElementsByName('subscribe')[1].checked = "checked");
+// console.log(document.getElementsByName('subscribe')[1].checked = "checked");
+
+/* Examining some of the common node properties */
+var myNode = document.querySelectorAll('nav li a')[4];
+console.log(myNode);
+// Return 1 because this is an element node
+console.log(myNode.nodeType);
+// This will return A that means anchor tag 
+console.log(myNode.nodeName);
+// This will return all of the attributes of the node which is an array
+console.log(myNode.attributes);
+// This will return first element of the node
+console.log(myNode.attributes[0]);
+// This will return 2 because this is an attribute node
+console.log(myNode.attributes[0].nodeType);
+// This will return href
+console.log(myNode.attributes[0].nodeName);
+console.log(myNode.firstChild);
+// console.log(myNode.firstChild.baseURI);
+// This will return 3 because this is an text node
+console.log(myNode.firstChild.nodeType);
+// To change inside the node text
+console.log(myNode.firstChild.nodeValue = 'registration');
+
+/* Traversing up and down DOM nodes */
+var myNode = document.querySelector('.artistlist li');
+console.log(myNode);
+console.dir(myNode);
+// Access the parent node of this node which goes up to level up
+console.log(myNode.parentNode);
+console.log(myNode.parentNode.childNodes);
+console.log(myNode.parentNode.firstChild);
+console.log(myNode.parentNode.lastChild);
+console.log(myNode.parentNode.firstChild.nextSibling);
+// If we use querySelector that will carrige return text instead it will better to use querySelectorAll()
+var myNode = document.querySelectorAll('.artistlist li');
+console.log(myNode);
+
+/* Targeting Node Elements */
+var myNode = document.querySelector('.artistlist li');
+console.log(myNode);
+// Parent will always return element nodes
+console.log(myNode.parentNode);
+// This will may have it will return everything including text node
+console.log(myNode.parentNode.childNodes);
+// It will more better instead of using childNodes only return those are elements
+console.log(myNode.parentNode.children);
+// This will return first text element
+console.log(myNode.parentNode.firstChild);
+// It will ignore the first text child it will return the first li element
+console.log(myNode.parentNode.firstElementChild);
+// This will return last element getting rid of any text element
+console.log(myNode.parentNode.lastElementChild);
 
