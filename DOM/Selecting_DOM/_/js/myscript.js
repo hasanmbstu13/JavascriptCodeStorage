@@ -40,3 +40,14 @@ console.log(myNode);
 // To select an specific class elements combining ID and Class
 var myNode = document.getElementById('featuredartists').getElementsByClassName('group');
 console.log(myNode);
+
+/* Isolating elements by querySelector() */
+// This will return the first article
+var singleSelector = document.querySelector('article');
+console.log(singleSelector);
+console.log(singleSelector.childNodes);
+
+// If we want to return the all matched elment of article then we use querySelectorAll()
+var myNode = document.querySelectorAll('article');
+console.log(myNode);
+console.log(myNode[2].childNodes);
