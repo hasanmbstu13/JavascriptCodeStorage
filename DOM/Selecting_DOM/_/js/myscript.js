@@ -51,3 +51,36 @@ console.log(singleSelector.childNodes);
 var myNode = document.querySelectorAll('article');
 console.log(myNode);
 console.log(myNode[2].childNodes);
+
+// We can also select elements uing CSS slectors
+var myNode = document.querySelectorAll('.article');
+console.log(myNode);
+// We can also type selector to an element
+myNode = document.querySelectorAll('input[type=radio]');
+console.log(myNode);
+// We can also select a descendant
+var myNode = document.querySelectorAll('#artistlist li');
+console.log(myNode);
+// We can also select child like image
+var myNode = document.querySelectorAll('#artistlist li>img');
+console.log(myNode);
+// We can also select muliple elements in the same list
+var myNode = document.querySelectorAll('#artistlist li>img','#comingtoevent img');
+console.log(myNode);
+
+/* Selecting form elements */
+// Return all of the forms that are present in the document in a array
+console.log(document.forms);
+// This will return first form
+console.log(document.forms[0]);
+// Since form has a name we can select the form using name
+console.log(document.register);
+// We can select the element of the form by sing name attribute
+console.log(document.register.myname);
+// We can change the value of the form fileds with the value attribute
+console.log(document.register.myname.value='Mainul Hasan');
+// There is a possibility two or more elements have the same name in the case we use special methods called getElementsByName and then use array index
+console.log(document.getElementsByName('subscribe')[0]);
+// Set the checked using checked attribute
+console.log(document.getElementsByName('subscribe')[1].checked = "checked");
+
