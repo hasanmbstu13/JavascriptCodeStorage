@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Type_juggling</title>
+</head>
+<body>
+	<script type="text/javascript">
+		document.write(typeof NaN);
+		document.write("<br>"+typeof "NaN");
+		document.write("<br>"+typeof false);
+		document.write("<br>");
+		document.write(1+ +"1"+"2");
+		document.write("<br>");
+		document.write("A"-2);
+		document.write("<br>");
+		document.write("150"- -'100');
+		document.write("<br>");
+		document.write("150"+ -'100');
+		document.write("<br>");
+		document.write(+1+ +"1"+"2");
+		document.write("<br>");
+		document.write(8 * null)
+		document.write("<br>");
+		document.write("5" - 1)
+		// → 4
+		document.write("<br>");
+		document.write("5" + 1)
+		// → 51
+		document.write("<br>");
+		document.write("five" * 2)
+		// → NaN
+		document.write("<br>");
+		document.write(false == 0)
+		// → true
+
+	</script>
+</body>
+</html>
