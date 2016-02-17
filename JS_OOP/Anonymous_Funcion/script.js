@@ -77,13 +77,23 @@ console.log(baz());
 //   console.log(foo === undefined); //Returns 'true'
 // })(window, document, jQuery);
 
-(function(mark, loves,$, drinking, coffee){
-  mark.open('http://www.google.com'); //window
-  loves.getElementById('menu'); //document
-  drinking('#menu').hide(); //jQuery
-  var foo;
-  console.log(foo === coffee); //undefined
-})(window, document, jQuery);
+// (function(mark, loves,$, drinking, coffee){
+//   mark.open('http://www.google.com'); //window
+//   loves.getElementById('menu'); //document
+//   drinking('#menu').hide(); //jQuery
+//   var foo;
+//   console.log(foo === coffee); //undefined
+// })(window, document, jQuery);
+
+// Calculating factorial by anonymous function
+alert((function factorial(n) {
+  return (n <= 1)? 1 : factorial(n - 1) * n;
+})(10));
+
+alert((function fibo(n){
+  return(n<2)?n:(fibo(n-1)+fibo(n-2));
+})(20))
+
 
 
 

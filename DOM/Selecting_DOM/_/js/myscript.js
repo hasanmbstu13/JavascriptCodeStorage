@@ -52,7 +52,7 @@ var myNode = document.querySelectorAll('article');
 console.log(myNode);
 console.log(myNode[2].childNodes);
 
-// We can also select elements uing CSS slectors
+// We can also select elements uing CSS selectors
 var myNode = document.querySelectorAll('.article');
 console.log(myNode);
 // We can also type selector to an element
