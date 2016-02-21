@@ -14,6 +14,20 @@
 // myNode.className = "myClass"; 
 // console.log(myNode);
 // Select a label
+// 
+function_name
+
+(function() {
+	
+});
+
+(function() {
+	this
+});
+
+function function_name(argument) {
+	// body...
+}
 
 /*Controlling classes with HTML5 classList*/
 var myNode = document.querySelector('.artistlist img');
@@ -76,8 +90,15 @@ console.dir(myNode);
 // See the text content of a node
 console.log(myNode.textContent);
 myNode.textContent = 'The quick brown fox';
-console.log(myNode);
+console.log(myNode);function function_name(argument) {
+	// body...
+}
 
+if (true) {}
+
+if (true) {}
+	if (true) {}
+		if (true) {} else {}
 /*Working with restricted attributes*/
 var myLabel = document.querySelector('label');
 console.log(myLabel);
