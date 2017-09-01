@@ -1,6 +1,7 @@
 (function(){
  
 	var myNode = document.querySelector('#artlist .pixgrid ul');
+  // console.log(myNode);
 
 	myNode.addEventListener("click", function(e){
     if (e.target.tagName === "IMG") {
