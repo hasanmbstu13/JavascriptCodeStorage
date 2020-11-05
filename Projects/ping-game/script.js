@@ -49,6 +49,8 @@ document.querySelector('.btn--roll').addEventListener('click', function() {
 
 document.querySelector('.btn--hold').addEventListener('click', function() {
 
+	// Add Current score to Global score
+
 });
 
 
