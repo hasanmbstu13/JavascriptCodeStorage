@@ -47,6 +47,10 @@ document.querySelector('.btn--roll').addEventListener('click', function() {
 	} 
 });
 
+document.querySelector('.btn--hold').addEventListener('click', function() {
+
+});
+
 
 // dice = Math.floor(Math.random() * 6) + 1;
 
