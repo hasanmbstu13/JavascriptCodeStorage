@@ -1,6 +1,7 @@
 'use strict';
 
-var scores, roundScore, activePlayer, gamePlaying;
+var scores, roundScore, activePlayer, gamePlaying, lastDice, scoreLoseThreshold;
+scoreLoseThreshold = 6
 
 init();
 
@@ -16,7 +17,12 @@ document.querySelector('.btn--roll').addEventListener('click', function() {
 		diceDOM.src = 'dice-' + dice + '.png';
 
 		// 3. Update the round score IF the rolled number was NOT a 1
-		if(dice !== 1){
+		if (dice === scoreLoseThreshold && lastDice == scoreLoseThreshold){
+			// Player looses score
+			scores[activePlayer] = 0;
+			document.querySelector('#score--' + activePlayer).textContent = '0';
+			nextPlayer(); 
+		}else if(dice !== 1){
 			// Add score
 			roundScore += dice;
 			document.querySelector('#current--' + activePlayer).textContent = roundScore;
@@ -24,7 +30,10 @@ document.querySelector('.btn--roll').addEventListener('click', function() {
 			// Next player
 			nextPlayer();
 
-		} 
+		}
+
+		lastDice = dice;
+
 	}
 	
 });
