@@ -12,18 +12,20 @@ Person.prototype.calculateAge = function() {
 
 Person.prototype.lastName = 'Smith';
 
-var john = new Person('John', 1990, 'teacher');
-var jane = new Person('Jane', 1969, 'designer');
-var mark = new Person('Mark', 1948, 'retired');
+var mainul = new Person('mainul', 1990, 'developer');
+var hasan = new Person('hasan', 1969, 'designer');
+var nabhan = new Person('nabhan', 1948, 'retired');
 
-john.calculateAge();
-jane.calculateAge();
-mark.calculateAge();
+mainul.calculateAge();
+hasan.calculateAge();
+nabhan.calculateAge();
 
-console.log(john.lastName);
-console.log(jane.lastName);
-console.log(mark.lastName);
+console.log(mainul.lastName);
+console.log(hasan.lastName);
+console.log(nabhan.lastName);
 */
+
+
 
 // Object.create
 var personProto = {
@@ -32,13 +34,41 @@ var personProto = {
 	}
 };
 
-var john = Object.create(personProto);
-john.name = 'John';
-john.yearOfBirth = 1990;
-john.job = 'teacher';
+var mainul = Object.create(personProto);
+mainul.name = 'Mainul';
+mainul.yearOfBirth = 1990;
+mainul.job = 'developer';
 
-var jane = Object.create(personProto, {
-	name: { value: 'Jane' },
+var hasan = Object.create(personProto, {
+	name: { value: 'hasan' },
 	yearOfBirth: { value: 1969 },
 	job: { value: 'designer' }
 });
+
+
+// Objects
+var obj1 = {
+	name: 'Mainul',
+	age: 26
+};
+var obj2 = obj1;
+obj1.age = 30;
+console.log(obj1.age);
+console.log(obj2.age);
+
+// Functions
+var age = 27;
+var obj = {
+	name: 'Mainul',
+	city: 'Dhaka'
+};
+
+function change(a, b) {
+	a = 30;
+	b.city = 'Noakhali';
+}
+
+change(age, obj);
+
+console.log(age);
+console.log(obj.city);
