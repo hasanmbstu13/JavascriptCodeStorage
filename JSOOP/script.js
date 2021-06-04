@@ -23,7 +23,7 @@ nabhan.calculateAge();
 console.log(mainul.lastName);
 console.log(hasan.lastName);
 console.log(nabhan.lastName);
-*/
+*/ 
 
 
 
