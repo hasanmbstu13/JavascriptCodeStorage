@@ -26,7 +26,7 @@
 			return el >= 18;
 		}
 
-		function maxHeartRate(el) {
+		function calculateMaxHeartRate(el) {
 			if (el >= 18 && el <= 81) {
 				return Math.round(206.9 - (0.67 * el));
 			} else {
@@ -38,7 +38,7 @@
 		
 		var fullAges = arrayCalc(ages, isFullAge);
 
-		var heartRates = arrayCalc(ages, maxHeartRate);
+		var heartRates = arrayCalc(ages, calculateMaxHeartRate);
 
 		console.log(ages);
 		console.log(fullAges);
