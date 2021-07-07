@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Immediately Invoked Function Expressions</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		(function() {
+			var score = Math.random() * 10;
+			console.log(score >= 5);
+		})();
+
+		(function (goodLuck) {
+			var score = Math.random() * 10;
+			console.log(score >= 5 - goodLuck);
+		})(5);
+
+	</script>
+
+</body>
+</html>
